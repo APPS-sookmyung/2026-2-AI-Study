@@ -22,7 +22,7 @@
 | ------| ------ | ------ | ------ | -----|
 | 1주차 | Training language models to follow instructions with human feedback (InstructGPT) | *논문 제목* | - | - |
 | 2주차 | - | - | *논문 제목* | *논문 제목* |
-| 3주차 | *논문 제목* | *논문 제목* | - | - |
+| 3주차 | Chain-of-Thought Prompting Elicits Reasoning in Large Language Models| *논문 제목* | - | - |
 | 4주차 | - | - | *논문 제목* | *논문 제목* |
 | 5주차 | *논문 제목* | *논문 제목* | - | - |
 | 6주차 | - | - | *논문 제목* | *논문 제목* |
