@@ -23,7 +23,7 @@
 | 1주차 | Training language models to follow instructions with human feedback (InstructGPT) | *논문 제목* | - | - |
 | 2주차 | - | - | Reflexion: Language agents with verbal reinforcement learning | *논문 제목* |
 | 3주차 | *논문 제목* | *논문 제목* | - | - |
-| 4주차 | - | - | *논문 제목* | *논문 제목* |
+| 4주차 | - | - | JEV-as-a-Judge: Accept When Confident, Escalate When Unsure | *논문 제목* |
 | 5주차 | *논문 제목* | *논문 제목* | - | - |
 | 6주차 | - | - | *논문 제목* | *논문 제목* |
 | 7주차 | *논문 제목* | *논문 제목* | - | - |
