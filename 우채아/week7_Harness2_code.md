@@ -1,13 +1,13 @@
-# Harness² 코드 읽기 가이드 (학부생 버전)
+# Harness² 코드 분석
 
-> 대상: `google-research/harness2` 저장소 (Apache 2.0). 논문 *Harness²: Recursive Agent Harnessing for an Open World* 의 공식 구현입니다.
+> 대상: `google-research/harness2` 저장소 (Apache 2.0)
 
 ---
 
 
 ## 1. 개요
 
-Harness²가 하는 일을 한 문장으로 쓰면:
+Harness²가 하는 일:
 
 > **"agent가 일하는 방식을 적어 둔 파일들(harness)을, 정답 없이 여러 번 실행해 보면서 고치고, 고친 경험을 다음 task에 참고용으로 남긴다."**
 
@@ -45,7 +45,7 @@ harness2/
 
 ---
 
-## 2. Harness는 그냥 "파일 묶음"이다
+## 2. Harness: 파일 묶음
 
 논문에서 harness는 8개 component(system prompt, guardrails, memory, …). 코드에서는 이게 **폴더 안의 각 파일**이다.
 
@@ -74,7 +74,7 @@ plugin_dir="plugin",    # C8 Plugin  -> plugin/<이름>.ts
 - Subagent: `sub_agents/<이름>/AGENT.md`
 - Script: `scripts/<이름>.py`
 
-**왜 중요한가?** Editor(LLM)가 고칠 수 있는 범위가 "이 파일들뿐"이라는 뜻입니다. 이 범위 밖의 파일을 만들면 `rejected` 로 걸러지고 다시 고치라는 피드백이 보내짐 (`recursion.py` 의 `_run_stage`).
+Editor(LLM)가 고칠 수 있는 범위가 "이 파일들뿐"이라는 뜻. 이 범위 밖의 파일을 만들면 `rejected` 로 걸러지고 다시 고치라는 피드백이 보내짐 (`recursion.py` 의 `_run_stage`).
 
 또 하나, `tree.py` 상단 주석에 "**omitted-is-inherited**(빠뜨린 것은 물려받는다)"라고 적혀 있습니다. Editor는 **바꾼 파일만** 내면 되고, 나머지는 원래 harness 그대로 이어집니다.
 
@@ -176,7 +176,7 @@ def _roll(adapter, ledger, task_id, label, tree, run_id_of, work_dir, *, record=
 
 
 
-## 12. 요약: 한 task의 데이터 흐름
+## 요약: 한 task의 데이터 흐름
 
 ```
  기본 harness H0 (매 task 동일)           library (같은 도메인의 지난 경험, 읽기 전용 참고)
